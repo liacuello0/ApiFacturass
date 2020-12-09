@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ApiFacturas';
+
+  opened = false;
+  
+  toggleSidebar(){
+    this.opened = !this.opened;
+  }
+
+  constructor(){}
 }

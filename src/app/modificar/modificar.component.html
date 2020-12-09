@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="">Lia's Application!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="">Registrar factura <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="ver">Ver facturas <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="modificar">Modificar facturas <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="eliminar">Eliminar facturas <span class="sr-only"></span></a>
+            </li>            
+        </ul>
+    </div>
+</nav>
+
+<html><head></head><body>
+    <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+        <div class="card_login">
+            <div class="card">
+                <div class="card-body text-center">
+                    <form #formModificar="ngForm" (ngSubmit)="modificar()">
+                    <h1 class="h3 mb-3 font-weight-normal"><b>Modificar una factura!</b></h1>
+
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="nombreCliente" name="nombreCliente" id="nombreCliente" class="form-control" placeholder="Nombre del cliente que desea modificar" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="rnc" name="rnc" id="rnc" class="form-control" placeholder="Cédula o RNC">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="fecha" name="fecha" id="fecha" class="form-control" placeholder="Fecha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="descripcion" name="descripcion" id="descripcion" class="form-control" placeholder="Descripción" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="codigo" name="codigo" id="codigo" class="form-control" placeholder="Código del artículo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="nombreArticulo" name="nombreArticulo" id="nombreArticulo" class="form-control" placeholder="Nombre del artículo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="precio" name="precio" id="precio" class="form-control" placeholder="Precio del artículo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="cantidad" name="cantidad" id="cantidad" class="form-control" placeholder="Cantidad de artículos" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="subtotal" name="subtotal" id="subtotal" class="form-control" placeholder="Subtotal" required>
+                    </div> 
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="itbis" name="itbis" id="itbis" class="form-control" placeholder="Itbis" required>
+                    </div> 
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="total" name="total" id="total" class="form-control" placeholder="Total" required>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">Modificar</button>   
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body></html>
